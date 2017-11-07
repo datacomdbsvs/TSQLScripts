@@ -1,0 +1,9 @@
+select 
+loginname,
+sysadmin as 'Admin',
+@@SERVERNAME
+from syslogins
+where loginname not like '##%'
+and  loginname not like 'NT %'
+and loginname<>'sa'
+and loginname <>'dslchks'

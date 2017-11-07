@@ -1,0 +1,10 @@
+
+SELECT 
+    CASE 
+         WHEN 
+             FULLTEXTSERVICEPROPERTY('IsFullTextInstalled') = 1 
+         THEN 
+              'INSTALLED' 
+         ELSE 
+              'NOT INSTALLED' 
+    END IsFullTextInstalled
